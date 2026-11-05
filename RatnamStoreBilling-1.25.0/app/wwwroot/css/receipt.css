@@ -1,0 +1,39 @@
+/* Counter receipt (Stage 2C). Used on screen and inside the print frame.
+   Black on white, a plain font that also has Gujarati letters on Windows. */
+
+.receipt {
+    font-family: Arial, "Nirmala UI", "Noto Sans Gujarati", sans-serif;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #000;
+    background: #fff;
+    padding: 2mm 0;
+    box-sizing: border-box;
+}
+
+/* Printable width of each paper (80 mm roll prints about 72 mm, 58 mm about 48 mm) */
+.receipt-Mm80 { width: 72mm; }
+.receipt-Mm58 { width: 48mm; font-size: 10.5px; }
+.receipt-A5   { width: 132mm; font-size: 12.5px; }
+.receipt-A4   { width: 186mm; font-size: 13.5px; }
+
+.receipt table { width: 100%; border-collapse: collapse; }
+.receipt td, .receipt th { padding: 1px 0; vertical-align: top; font-weight: normal; }
+.receipt th { font-weight: 700; border-bottom: 1px solid #000; }
+.receipt-A5 td, .receipt-A5 th { padding: 2px 4px; }
+.receipt-A4 td, .receipt-A4 th { padding: 3px 6px; }
+
+.receipt .r-center { text-align: center; }
+.receipt .r-left   { text-align: left; }
+.receipt .r-right  { text-align: right; white-space: nowrap; }
+.receipt .r-bold   { font-weight: 700; }
+.receipt .r-small  { font-size: 0.85em; }
+.receipt .r-indent { padding-left: 3mm; }
+.receipt .r-gap    { margin-top: 2px; }
+.receipt .r-title  { font-size: 1.35em; font-weight: 700; }
+.receipt .r-line   { border-top: 1px dashed #000; margin: 3px 0; }
+.receipt .r-total td { font-size: 1.3em; font-weight: 700; padding-top: 3px; }
+.receipt .r-tax td, .receipt .r-tax th { font-size: 0.9em; }
+
+/* Inside the print frame: nothing else on the page */
+body.receipt-print { margin: 0; padding: 0 2mm; background: #fff; }
